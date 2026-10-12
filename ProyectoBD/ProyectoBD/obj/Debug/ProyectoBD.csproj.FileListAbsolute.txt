@@ -1,0 +1,12 @@
+C:\Users\marco\OneDrive\Documents\SharpDevelop Projects\ProyectoBD\ProyectoBD\obj\Debug\ProyectoBD.MainForm.resources
+C:\Users\marco\OneDrive\Documents\SharpDevelop Projects\ProyectoBD\ProyectoBD\obj\Debug\ProyectoBD.Menu.resources
+C:\Users\marco\OneDrive\Documents\SharpDevelop Projects\ProyectoBD\ProyectoBD\obj\Debug\ProyectoBD.MenuE.resources
+C:\Users\marco\OneDrive\Documents\SharpDevelop Projects\ProyectoBD\ProyectoBD\obj\Debug\ProyectoBD.Registro.resources
+C:\Users\marco\OneDrive\Documents\SharpDevelop Projects\ProyectoBD\ProyectoBD\obj\Debug\ProyectoBD.csproj.GenerateResource.Cache
+C:\Users\marco\OneDrive\Documents\SharpDevelop Projects\ProyectoBD\ProyectoBD\obj\Debug\ProyectoBD.csprojResolveAssemblyReference.cache
+C:\Users\marco\OneDrive\Documents\SharpDevelop Projects\ProyectoBD\ProyectoBD\bin\Debug\ProyectoBD.exe.config
+C:\Users\marco\OneDrive\Documents\SharpDevelop Projects\ProyectoBD\ProyectoBD\bin\Debug\ProyectoBD.exe
+C:\Users\marco\OneDrive\Documents\SharpDevelop Projects\ProyectoBD\ProyectoBD\bin\Debug\ProyectoBD.pdb
+C:\Users\marco\OneDrive\Documents\SharpDevelop Projects\ProyectoBD\ProyectoBD\bin\Debug\MySql.Data.dll
+C:\Users\marco\OneDrive\Documents\SharpDevelop Projects\ProyectoBD\ProyectoBD\obj\Debug\ProyectoBD.exe
+C:\Users\marco\OneDrive\Documents\SharpDevelop Projects\ProyectoBD\ProyectoBD\obj\Debug\ProyectoBD.pdb
