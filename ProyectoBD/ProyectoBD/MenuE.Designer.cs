@@ -18,6 +18,7 @@ namespace ProyectoBD
 		private System.Windows.Forms.Button btnVer;
 		private System.Windows.Forms.Label label1;
 		private System.Windows.Forms.Button btnCerrarS;
+		private System.Windows.Forms.DataGridView dgvUsuarios;
 		
 		/// <summary>
 		/// Disposes resources used by the form.
@@ -44,11 +45,13 @@ namespace ProyectoBD
 			this.btnVer = new System.Windows.Forms.Button();
 			this.label1 = new System.Windows.Forms.Label();
 			this.btnCerrarS = new System.Windows.Forms.Button();
+			this.dgvUsuarios = new System.Windows.Forms.DataGridView();
+			((System.ComponentModel.ISupportInitialize)(this.dgvUsuarios)).BeginInit();
 			this.SuspendLayout();
 			// 
 			// btnSalir
 			// 
-			this.btnSalir.Location = new System.Drawing.Point(12, 186);
+			this.btnSalir.Location = new System.Drawing.Point(12, 442);
 			this.btnSalir.Name = "btnSalir";
 			this.btnSalir.Size = new System.Drawing.Size(75, 23);
 			this.btnSalir.TabIndex = 8;
@@ -58,7 +61,7 @@ namespace ProyectoBD
 			// 
 			// btnVer
 			// 
-			this.btnVer.Location = new System.Drawing.Point(52, 53);
+			this.btnVer.Location = new System.Drawing.Point(12, 65);
 			this.btnVer.Name = "btnVer";
 			this.btnVer.Size = new System.Drawing.Size(108, 23);
 			this.btnVer.TabIndex = 7;
@@ -76,7 +79,7 @@ namespace ProyectoBD
 			// 
 			// btnCerrarS
 			// 
-			this.btnCerrarS.Location = new System.Drawing.Point(94, 186);
+			this.btnCerrarS.Location = new System.Drawing.Point(820, 442);
 			this.btnCerrarS.Name = "btnCerrarS";
 			this.btnCerrarS.Size = new System.Drawing.Size(108, 23);
 			this.btnCerrarS.TabIndex = 9;
@@ -84,11 +87,21 @@ namespace ProyectoBD
 			this.btnCerrarS.UseVisualStyleBackColor = true;
 			this.btnCerrarS.Click += new System.EventHandler(this.BtnCerrarSClick);
 			// 
+			// dgvUsuarios
+			// 
+			this.dgvUsuarios.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+			this.dgvUsuarios.Location = new System.Drawing.Point(166, 12);
+			this.dgvUsuarios.Name = "dgvUsuarios";
+			this.dgvUsuarios.RowTemplate.Height = 24;
+			this.dgvUsuarios.Size = new System.Drawing.Size(762, 419);
+			this.dgvUsuarios.TabIndex = 12;
+			// 
 			// MenuE
 			// 
 			this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-			this.ClientSize = new System.Drawing.Size(214, 221);
+			this.ClientSize = new System.Drawing.Size(953, 477);
+			this.Controls.Add(this.dgvUsuarios);
 			this.Controls.Add(this.btnCerrarS);
 			this.Controls.Add(this.btnSalir);
 			this.Controls.Add(this.btnVer);
@@ -96,6 +109,7 @@ namespace ProyectoBD
 			this.Name = "MenuE";
 			this.Text = "MenuE";
 			this.Load += new System.EventHandler(this.MenuELoad);
+			((System.ComponentModel.ISupportInitialize)(this.dgvUsuarios)).EndInit();
 			this.ResumeLayout(false);
 
 		}

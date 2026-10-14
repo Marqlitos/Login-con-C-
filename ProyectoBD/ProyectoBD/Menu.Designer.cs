@@ -20,6 +20,8 @@ namespace ProyectoBD
 		private System.Windows.Forms.Button btnSalir;
 		private System.Windows.Forms.Button btnBorrar;
 		private System.Windows.Forms.Button btnCerrarS;
+		private System.Windows.Forms.DataGridView dgvUsuarios;
+		private System.Windows.Forms.Button btnGuardar;
 		
 		/// <summary>
 		/// Disposes resources used by the form.
@@ -48,6 +50,9 @@ namespace ProyectoBD
 			this.btnSalir = new System.Windows.Forms.Button();
 			this.btnBorrar = new System.Windows.Forms.Button();
 			this.btnCerrarS = new System.Windows.Forms.Button();
+			this.dgvUsuarios = new System.Windows.Forms.DataGridView();
+			this.btnGuardar = new System.Windows.Forms.Button();
+			((System.ComponentModel.ISupportInitialize)(this.dgvUsuarios)).BeginInit();
 			this.SuspendLayout();
 			// 
 			// label1
@@ -60,7 +65,7 @@ namespace ProyectoBD
 			// 
 			// btnEditar
 			// 
-			this.btnEditar.Location = new System.Drawing.Point(56, 58);
+			this.btnEditar.Location = new System.Drawing.Point(12, 64);
 			this.btnEditar.Name = "btnEditar";
 			this.btnEditar.Size = new System.Drawing.Size(108, 24);
 			this.btnEditar.TabIndex = 1;
@@ -70,7 +75,7 @@ namespace ProyectoBD
 			// 
 			// btnVer
 			// 
-			this.btnVer.Location = new System.Drawing.Point(56, 88);
+			this.btnVer.Location = new System.Drawing.Point(12, 35);
 			this.btnVer.Name = "btnVer";
 			this.btnVer.Size = new System.Drawing.Size(108, 23);
 			this.btnVer.TabIndex = 2;
@@ -80,7 +85,7 @@ namespace ProyectoBD
 			// 
 			// btnSalir
 			// 
-			this.btnSalir.Location = new System.Drawing.Point(12, 188);
+			this.btnSalir.Location = new System.Drawing.Point(12, 434);
 			this.btnSalir.Name = "btnSalir";
 			this.btnSalir.Size = new System.Drawing.Size(75, 23);
 			this.btnSalir.TabIndex = 3;
@@ -90,7 +95,7 @@ namespace ProyectoBD
 			// 
 			// btnBorrar
 			// 
-			this.btnBorrar.Location = new System.Drawing.Point(56, 118);
+			this.btnBorrar.Location = new System.Drawing.Point(12, 123);
 			this.btnBorrar.Name = "btnBorrar";
 			this.btnBorrar.Size = new System.Drawing.Size(108, 23);
 			this.btnBorrar.TabIndex = 4;
@@ -100,7 +105,7 @@ namespace ProyectoBD
 			// 
 			// btnCerrarS
 			// 
-			this.btnCerrarS.Location = new System.Drawing.Point(98, 188);
+			this.btnCerrarS.Location = new System.Drawing.Point(814, 434);
 			this.btnCerrarS.Name = "btnCerrarS";
 			this.btnCerrarS.Size = new System.Drawing.Size(108, 23);
 			this.btnCerrarS.TabIndex = 10;
@@ -108,11 +113,33 @@ namespace ProyectoBD
 			this.btnCerrarS.UseVisualStyleBackColor = true;
 			this.btnCerrarS.Click += new System.EventHandler(this.BtnCerrarSClick);
 			// 
+			// dgvUsuarios
+			// 
+			this.dgvUsuarios.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+			this.dgvUsuarios.Location = new System.Drawing.Point(160, 9);
+			this.dgvUsuarios.Name = "dgvUsuarios";
+			this.dgvUsuarios.RowTemplate.Height = 24;
+			this.dgvUsuarios.Size = new System.Drawing.Size(762, 419);
+			this.dgvUsuarios.TabIndex = 11;
+			this.dgvUsuarios.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DgvUsuariosCellContentClick);
+			// 
+			// btnGuardar
+			// 
+			this.btnGuardar.Location = new System.Drawing.Point(12, 94);
+			this.btnGuardar.Name = "btnGuardar";
+			this.btnGuardar.Size = new System.Drawing.Size(108, 23);
+			this.btnGuardar.TabIndex = 12;
+			this.btnGuardar.Text = "Guardar";
+			this.btnGuardar.UseVisualStyleBackColor = true;
+			this.btnGuardar.Click += new System.EventHandler(this.BtnGuardarClick);
+			// 
 			// Menu
 			// 
 			this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-			this.ClientSize = new System.Drawing.Size(218, 223);
+			this.ClientSize = new System.Drawing.Size(934, 469);
+			this.Controls.Add(this.btnGuardar);
+			this.Controls.Add(this.dgvUsuarios);
 			this.Controls.Add(this.btnCerrarS);
 			this.Controls.Add(this.btnBorrar);
 			this.Controls.Add(this.btnSalir);
@@ -121,6 +148,7 @@ namespace ProyectoBD
 			this.Controls.Add(this.label1);
 			this.Name = "Menu";
 			this.Text = "Menu";
+			((System.ComponentModel.ISupportInitialize)(this.dgvUsuarios)).EndInit();
 			this.ResumeLayout(false);
 
 		}
