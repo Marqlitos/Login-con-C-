@@ -32,10 +32,9 @@ namespace ProyectoBD
 		private void CargarDatosEnGrid()
 		{
 			ConexionBD backend = new ConexionBD();
-			// Llamamos al Backend y le asignamos el resultado al DataSource del Grid
 			dgvUsuarios.DataSource = backend.ObtenerUsuariosAdmin();
+			dgvUsuarios.Columns["Contrasena"].ReadOnly = true;
 		}
-		
 		void BtnSalirClick(object sender, EventArgs e)
 		{
 			//Boton Salir

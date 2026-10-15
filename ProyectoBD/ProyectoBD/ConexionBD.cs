@@ -193,14 +193,15 @@ namespace ProyectoBD
 
 			// Hacemos el SELECT.
 			string consultaSQL = @"SELECT
-        IdUsuario, Nombre, ApellidoPaterno, ApellidoMaterno, Usuario,
-        CAST(AES_DECRYPT(RFC, @llave) AS CHAR) AS RFC,
-        Email,
-        CAST(AES_DECRYPT(CURP, @llave) AS CHAR) AS CURP,
-        Edad, NoControl, Area,
-        CAST(AES_DECRYPT(Telefono, @llave) AS CHAR) AS Telefono,
-        Rol, FechaNacimiento, Estado
-        FROM Usuarios";
+    IdUsuario, Nombre, ApellidoPaterno, ApellidoMaterno, Usuario,
+    Contrasena,
+    CAST(AES_DECRYPT(RFC, @llave) AS CHAR) AS RFC,
+    Email,
+    CAST(AES_DECRYPT(CURP, @llave) AS CHAR) AS CURP,
+    Edad, NoControl, Area,
+    CAST(AES_DECRYPT(Telefono, @llave) AS CHAR) AS Telefono,
+    Rol, FechaNacimiento, Estado
+    FROM Usuarios";
 
 			try
 			{
@@ -334,6 +335,42 @@ namespace ProyectoBD
 			{
 				conexion.Close();
 			}
+		}
+		
+		public DataTable ObtenerUsuariosEmpleado()
+		{
+			DataTable tabla = new DataTable();
+			MySqlConnection conexion = ObtenerConexion();
+			if (conexion == null) return tabla;
+
+			// HEX() muestra el dato cifrado como texto legible; no se usa la llave
+			string consultaSQL = @"SELECT
+        IdUsuario, Nombre, ApellidoPaterno, ApellidoMaterno, Usuario,
+        Contrasena,
+        HEX(RFC) AS RFC,
+        Email,
+        HEX(CURP) AS CURP,
+        Edad, NoControl, Area,
+        HEX(Telefono) AS Telefono,
+        Rol, FechaNacimiento, Estado
+        FROM Usuarios";
+
+			try
+			{
+				MySqlCommand comando = new MySqlCommand(consultaSQL, conexion);
+				MySqlDataAdapter adaptador = new MySqlDataAdapter(comando);
+				adaptador.Fill(tabla);
+			}
+			catch (Exception ex)
+			{
+				MessageBox.Show("Error al cargar usuarios: " + ex.Message,
+				                "Error MySQL", MessageBoxButtons.OK, MessageBoxIcon.Error);
+			}
+			finally
+			{
+				conexion.Close();
+			}
+			return tabla;
 		}
 		
 	}

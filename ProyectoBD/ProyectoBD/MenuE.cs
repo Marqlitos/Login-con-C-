@@ -29,12 +29,14 @@ namespace ProyectoBD
 			//
 		}
 		
+				//Logica para cargar datos encriptados
 		private void CargarDatosEnGrid()
 		{
 			ConexionBD backend = new ConexionBD();
-			// Llamamos al Backend y le asignamos el resultado al DataSource del Grid
-			dgvUsuarios.DataSource = backend.ObtenerUsuariosAdmin();
+			dgvUsuarios.DataSource = backend.ObtenerUsuariosEmpleado();
+			dgvUsuarios.ReadOnly = true; // el empleado solo consulta
 		}
+		
 		
 		void MenuELoad(object sender, EventArgs e)
 		{
@@ -111,5 +113,6 @@ namespace ProyectoBD
 				
 			}
 		}
+		
 	}
-	}
+}
